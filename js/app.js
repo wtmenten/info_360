@@ -1,9 +1,7 @@
 var app = angular.module('processBook', ['ui.router'])
 
  .controller('MainController', function($scope, $state) {
-     $scope.$route = $route;
-     $scope.$location = $location;
-     $scope.$routeParams = $routeParams;
+
  })
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
