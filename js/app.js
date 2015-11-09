@@ -1,38 +1,29 @@
-var app = angular.module('processBook', ['ngRoute'])
+var app = angular.module('processBook', ['ui.router'])
 
- .controller('MainController', function($scope, $route, $routeParams, $location) {
+ .controller('MainController', function($scope, $state) {
      $scope.$route = $route;
      $scope.$location = $location;
      $scope.$routeParams = $routeParams;
  })
 
- .controller('entryController', function($scope, $routeParams) {
-     $scope.name = "EntryController";
-     $scope.params = $routeParams;
- })
+.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+     //
+     // For any unmatched url, redirect to /state1
+     $urlRouterProvider.otherwise("/");
+     // $locationProvider.html5Mode(true);
 
-.config(function($routeProvider, $locationProvider) {
-  $routeProvider
-   .when('/entry/:entryId', {
-    templateUrl: function (params) {return 'views/entry/' + params.entryId + '.html';},
-    controller: 'entryController',
-    resolve: {
-      // I will cause a 1 second delay
-      delay: function($q, $timeout) {
-        var delay = $q.defer();
-        $timeout(delay.resolve, 200);
-        return delay.promise;
-      }
-    }
-  })
+     //
+     // Now set up the states
+     $stateProvider
+      .state('Entry', {
+        url: "/entry/:entryId",
+        templateUrl: function (stateParams){
+                    return '/partials/entry' + stateParams.entryId + '.html';
+                }
+      })
+       .state('Home', {
+         url: "/",
+         templateUrl: "",
+       })
 
-  // configure html5 to get links working on jsfiddle
-  $locationProvider.html5Mode(false);
-
-  // angular.module('processBook').run(function($rootScope, $templateCache) {
-  //      $rootScope.$on('$viewContentLoaded', function() {
-  //         $templateCache.removeAll();
-  //      });
-  //   });
-
-});
+    });
