@@ -16,12 +16,12 @@ var app = angular.module('processBook', ['ui.router'])
       .state('Entry', {
         url: "/entry/:entryId",
         templateUrl: function (stateParams){
-                    return '/partials/entry' + stateParams.entryId + '.html';
+                    return 'partials/entry' + stateParams.entryId + '.html';
                 }
       })
        .state('Home', {
          url: "/",
-         templateUrl: "/partials/start.html",
+         templateUrl: "partials/start.html",
        })
 
     });
