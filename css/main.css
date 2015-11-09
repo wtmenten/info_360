@@ -1,0 +1,67 @@
+.menu {
+    background-color: #ddd;
+    padding:15px 10px;
+}
+
+.menu a {
+    /*text-decoration: none;*/
+    /*color:black;*/
+    font-size:1.4em;
+}
+
+.entry {
+
+}
+
+#entry1 div {
+    margin:25px 0px;
+}
+
+.inline-b {
+    display: inline-block;
+}
+
+ #entry3 dt {
+    float: left;
+    padding-right:5px;
+}
+
+#entry3 div {
+    width:100%;
+}
+
+#entry5 .storyframe {
+    height:300px;
+}
+
+#entry5 > div {
+    padding:50px 0px;
+}
+
+.header {
+    position: relative;
+    background-color: #ddd;
+    padding:5px 15px;
+}
+
+.header h1 {
+    margin:5px 0px;
+    font-size: 3em
+}
+
+.header h3 {
+margin:5px 0px;
+    position:relative;
+    top:8px;
+}
+
+nav {
+    position: absolute;
+    bottom:0px;
+    left:400px;
+    padding:0px 0px;
+}
+
+.btn {
+    border-radius: 1px;
+}

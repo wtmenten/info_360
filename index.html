@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>My Process Book</title>
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="css/bootflat.min.css"/>
+      <link rel="stylesheet" href="css/main.css"/>
+
+      <!-- include libraries -->
+      <script src="js/angular.min.js"></script>
+      <script src="js/angular-route.js"></script>
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/app.js"></script>
+
+      <base href="/">
+
+
+    </head>
+    <body ng-app="processBook">
+        <div ng-controller="MainController" class="">
+            <div class="header clearfix">
+                <h1 class="pull-left"><a href="/">Process Book</a></h1>
+                <h3 class="pull-right"><i>William Menten-Weil</i></h3>
+                <nav class="clearfix">
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" id="entryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Entries
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="entryDropdown">
+                        <li><a href="/entry/1" class="">Entry 1</a></li>
+                        <li><a href="/entry/2" class="">Entry 2</a></li>
+                        <li><a href="/entry/3" class="">Entry 3</a></li>
+                        <li><a href="/entry/4" class="">Entry 4</a></li>
+                        <li><a href="/entry/5" class="">Entry 5</a></li>
+                        <li><a href="/entry/6" class="">Entry 6</a></li>
+                      </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="col-xs-12 clearfix" ng-view>
+            </div>
+    <!--       <hr />
+
+          <pre>$location.path() = {{$location.path()}}</pre>
+          <pre>currentPath = {{currentPath}}</pre>
+          <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+          <pre>$route.current.params = {{$route.current.params}}</pre>
+          <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
+          <pre>$routeParams = {{$routeParams}}</pre>
+        </div> -->
+    </body>
+</html>
