@@ -21,7 +21,7 @@ var app = angular.module('processBook', ['ui.router'])
       })
        .state('Home', {
          url: "/",
-         templateUrl: "",
+         templateUrl: "/partials/start.html",
        })
 
     });
