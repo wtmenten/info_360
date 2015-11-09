@@ -14,7 +14,7 @@ var app = angular.module('processBook', ['ngRoute'])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
    .when('/entry/:entryId', {
-    templateUrl: function (params) {return '/views/entry/' + params.entryId + '.html';},
+    templateUrl: function (params) {return 'views/entry/' + params.entryId + '.html';},
     controller: 'entryController',
     resolve: {
       // I will cause a 1 second delay
