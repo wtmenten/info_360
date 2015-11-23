@@ -1,7 +1,6 @@
 var app = angular.module('processBook', ['ui.router'])
 
  .controller('MainController', function($scope, $state) {
-
  })
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -14,14 +13,26 @@ var app = angular.module('processBook', ['ui.router'])
      // Now set up the states
      $stateProvider
       .state('Entry', {
-        url: "/entry/:entryId",
+        url: "/processBook/entry/:entryId",
         templateUrl: function (stateParams){
                     return 'partials/entry/' + stateParams.entryId + '.html';
                 }
       })
-       .state('Home', {
-         url: "/",
-         templateUrl: "partials/start.html",
-       })
+      .state('Narrative', {
+        url: "/narrative",
+        templateUrl: function (stateParams){
+                    return 'partials/narrative/start.html';
+                }
+      })
+      .state('Step', {
+        url: "/narrative/step/:step",
+        templateUrl: function (stateParams){
+                    return 'partials/narrative/step/' + stateParams.step + '.html';
+                }
+      })
+      .state('Home', {
+        url: "/",
+        templateUrl: "partials/start.html",
+      })
 
     });

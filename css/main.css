@@ -9,16 +9,22 @@
     font-size:1.4em;
 }
 
-.entry {
-
+.entry > div {
+    border-bottom: 2px solid #ddd;
+    padding:25px 0px;
 }
 
-#entry1 div {
-    margin:25px 0px;
+.entry > div:last-child {
+    border-bottom: 0px solid #ddd;
 }
+
 
 .inline-b {
     display: inline-block;
+}
+
+#view-container {
+    margin-bottom: 25px;
 }
 
  #entry3 dt {
@@ -37,6 +43,11 @@
 #entry5 > div {
     padding:50px 0px;
 }
+
+#entry5 > div > div{
+    overflow:hidden;
+}
+
 
 .header {
     position: relative;
@@ -58,10 +69,36 @@ margin:5px 0px;
 nav {
     position: absolute;
     bottom:0px;
-    left:400px;
+    left:325px;
     padding:0px 0px;
+}
+
+nav > ul {
+    margin:0px;
+}
+
+nav > ul > li {
+    float:left;
+    margin:0px 5px;
 }
 
 .btn {
     border-radius: 1px;
+}
+
+.step .content {
+    padding:25px;
+}
+
+.step p {
+    font-size: 1.1em;
+}
+
+.step > .content > div {
+    padding:25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.step > .content > div:last-child {
+    border-bottom: 0px solid #ddd;
 }

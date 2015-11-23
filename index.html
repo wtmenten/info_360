@@ -5,7 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <title>My Process Book</title>
+      <title>Info 360</title>
 
       <!-- bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -20,33 +20,39 @@
       <script src="js/app.js"></script>
 
       <base href="/wtmenten/info_360/">
+      <!-- <base href="/"> -->
 
 
     </head>
     <body ng-app="processBook">
         <div ng-controller="MainController" class="">
             <div class="header clearfix">
-                <h1 class="pull-left"><a ui-sref="Home">Process Book</a></h1>
+                <h1 class="pull-left"><a ui-sref="Home">Info 360</a></h1>
                 <h3 class="pull-right"><i>William Menten-Weil</i></h3>
                 <nav class="clearfix">
-                    <div class="dropdown">
-                      <button class="btn btn-primary dropdown-toggle" type="button" id="entryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Entries
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="entryDropdown">
-                        <li><a ui-sref="Entry({entryId : 1})" class="">Entry 1</a></li>
-                        <li><a ui-sref="Entry({entryId : 2})" class="">Entry 2</a></li>
-                        <li><a ui-sref="Entry({entryId : 3})" class="">Entry 3</a></li>
-                        <li><a ui-sref="Entry({entryId : 4})" class="">Entry 4</a></li>
-                        <li><a ui-sref="Entry({entryId : 5})" class="">Entry 5</a></li>
-                        <li><a ui-sref="Entry({entryId : 6})" class="">Entry 6</a></li>
-                      </ul>
-                    </div>
+                    <ul class="list-unstyled">
+                      <li>
+                          <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="entryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              Process Book
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="entryDropdown">
+                              <li><a ui-sref="Entry({entryId : 1})" class="">Entry 1</a></li>
+                              <li><a ui-sref="Entry({entryId : 2})" class="">Entry 2</a></li>
+                              <li><a ui-sref="Entry({entryId : 3})" class="">Entry 3</a></li>
+                              <li><a ui-sref="Entry({entryId : 4})" class="">Entry 4</a></li>
+                              <li><a ui-sref="Entry({entryId : 5})" class="">Entry 5</a></li>
+                              <li><a ui-sref="Entry({entryId : 6})" class="">Entry 6</a></li>
+                            </ul>
+                          </div>
+                      </li>
+                      <li><button class="btn btn-primary" ui-sref="Narrative()">HW #8</button></li>
+                    </ul>
                 </nav>
             </div>
 
-            <div class="col-xs-12 clearfix" ui-view>
+            <div id="view-container" class="col-xs-12 clearfix" ui-view>
             </div>
     <!--       <hr />
 
