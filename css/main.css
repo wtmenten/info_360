@@ -18,6 +18,17 @@
     border-bottom: 0px solid #ddd;
 }
 
+@media (min-width: 962px) {
+    .entry {
+        padding:0px 50px;
+    }
+}
+@media (min-width: 1200px) {
+    .entry {
+        padding:0px 150px;
+    }
+}
+
 
 .inline-b {
     display: inline-block;
@@ -46,6 +57,19 @@
 
 #entry5 > div > div{
     overflow:hidden;
+}
+
+#entry6 p, #entry7 p, #entry10 p, #entry10 ol li  {
+    font-size: 1.2em;
+}
+
+#entry8 > .stateTrans > div, #entry10 > .stateTrans > div {
+    padding:20px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+#entry8 > .stateTrans > div:last-child, #entry10 > .stateTrans > div:last-child {
+    border-bottom: 0px solid #ddd;
 }
 
 
